@@ -1,0 +1,49 @@
+React ->
+
+React is a js library created by facebook to create user interface.
+
+react is used to make a single page application .
+react allows us to create reusable componentes
+
+componente ->>
+
+are independent and reusable bits of code . they serve the same purpose
+as js functions . but work in isolation and reutrn HTML.
+componente come in two types . class componente and function componente.
+
+
+application                   application
+.header                           |
+.body                   header     body     sidebar
+.sidebar            [componente1] [cn 2]    [cn3]
+
+
+JSX -> stands for javascript XML or Extenstion
+with the help of jsx we can write and add HTML in React,
+jsx converts HTML tags into react element. 
+its not compulsory to use JSX
+
+Ruels of writing JSX
+1. HTML code must wrap into one top level element.
+2.element must be closed
+3.attribute calss = className
+4.no if else condition inside jsx but ternary operator is okay
+5.js exprssion in jsx must be wraped in {}
+        
+
+
+PROPS-->
+
+.PROPS stands for properties.
+.PROPS are used to transfer data from one componente to another.
+.PROPS are read only.
+.PROPS are just like a function in javascript
+
+
+State -->>
+
+.State is a build in react object that is used to contain data or
+information about the component.
+.a state can be modified based on user action or network changes.
+.everytime when the state of an object changes , react re-render the component 
+to the browser.
