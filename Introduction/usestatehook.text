@@ -1,0 +1,30 @@
+Rules of Hooks->
+1- must be  written inside function component.
+2- must be import in component
+3- must be call at top level of component
+4- cannot be conditional
+
+example ->>
+
+import {useState , React} from 'react' ; 
+
+function App() {
+
+  const [count , setCounter] = useState(0);
+  function updateCount(){
+    setCounter(count+1)
+  }
+
+  return (
+    <>
+    <h1>learing state {count} </h1>
+    <button onClick={updateCount}>clicked Me</button>
+    </>
+   
+    
+  );
+}
+
+export default App;
+
+

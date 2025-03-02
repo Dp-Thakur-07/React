@@ -1,0 +1,28 @@
+useref->
+
+import { useRef, useState,React } from 'react';
+
+function App() {
+   const refelm = useRef("");
+   const [data,changedata] =useState("")
+  
+   function changecolor(){
+      if( refelm.current.style.backgroundColor == "red"){
+         refelm.current.style.backgroundColor = "blue"
+      }else{
+         refelm.current.style.backgroundColor = "red"
+      }
+      console.log(refelm);
+      
+   }
+ 
+  
+  return (
+    <>
+    <h1>learing state</h1>
+    <div style={{backgroundColor:"red" , height:"200px" ,width:"300px"}} ref={refelm} ></div>
+    <button onClick={changecolor}>button</button>
+    </>
+   
+    
+  );
