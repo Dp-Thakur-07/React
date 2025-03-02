@@ -1,0 +1,7 @@
+The Context API in React is a way to manage global state without needing to pass props manually at every level of the component tree. 
+It helps avoid "prop drilling", where you pass data through multiple components unnecessarily.
+
+🛠 Steps to Use Context API:
+Create a Context – This is like a global storage for your data.
+Provide the Context – Wrap your components so they can access the data.
+Consume the Context – Read the data in any component that needs it.

@@ -1,0 +1,14 @@
+jab me hamare component first time render hota hai to useeffect run hota hai and jab bi ham hmare 
+component ke ander koi bi state change karte he tab bi run hota hai  
+
+agr har bar click karne pr hame useEffect run nhi karna to ham option parameter ka use karte hi 
+
+useEffect( ()=>{
+    console.log("hi")
+},[])
+
+
+NOTE ->>
+
+useState: Used to create and manage state inside a functional component. It allows the component to remember values between renders.
+useEffect: Used to perform side effects in a component (like fetching data, updating the DOM, or setting up a subscription). It runs after rendering.
