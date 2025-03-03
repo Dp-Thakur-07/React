@@ -1,0 +1,26 @@
+🎯 What is an Uncontrolled Component in React? (Easy Explanation)
+An Uncontrolled Component is a form element (like an <input> or <textarea>) where the browser handles its state instead of React. Instead of using useState, we use ref to get the value when needed.
+
+🔥 Example of an Uncontrolled Component
+jsx
+Copy
+Edit
+import React, { useRef } from "react";
+
+function UncontrolledInput() {
+  const inputRef = useRef(null); // Reference to input field
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Input Value: ${inputRef.current.value}`); // Getting value using ref
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" ref={inputRef} /> {/* Uncontrolled */}
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+export default UncontrolledInput;

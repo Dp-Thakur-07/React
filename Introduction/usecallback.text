@@ -1,0 +1,75 @@
+\\\
+
+The useCallback hook in React is used to memorize a function so that it doesn’t get re-created on every render. This improves performance, especially when passing functions as props to child components.
+
+Why Use useCallback?
+Every time a component re-renders, all the functions inside it are re-created. This can cause unnecessary re-renders in child components if they depend on those functions.
+
+✅ With useCallback → The function is only created when needed.
+❌ Without useCallback → The function is created on every render, even if nothing changed.
+
+Syntax:
+jsx
+Copy
+Edit
+const memoizedFunction = useCallback(() => {
+  // Function logic
+}, [dependencies]);
+If dependencies change, the function is re-created.
+If dependencies don’t change, the same function is reused.
+
+
+
+\\\
+
+
+
+
+app.js->
+
+import ChildA from './ChildA';
+import React, {  useCallback, useState } from 'react';
+
+function App() {
+  const [add,setadd] = useState(0);
+  const [count,setcount] = useState(0);
+
+  const learning =useCallback( ()=>{
+    //some function
+  },[count])
+
+
+  return (
+    <>
+     <div className='app'>
+      <h1>learning usememo</h1>
+      <ChildA learning={learning} count = {count}/>
+        <button onClick={()=> setadd(add+1)}>adding</button>
+        <span>{add}</span>
+        <button onClick={()=>setcount(count+1)}>count</button>
+        <span>{count}</span>
+  
+     </div>
+    </>
+   
+    
+  );
+}
+
+export default App;
+
+
+ChildA->
+
+import {React,memo} from "react";
+// import ChildB from "./ChildB";
+
+function ChildA({learning,count}){
+   console.log("childA");
+   
+ return(
+   <></>
+ )
+}
+
+export default memo(ChildA);
